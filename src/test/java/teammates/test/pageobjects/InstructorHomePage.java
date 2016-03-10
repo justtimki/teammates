@@ -319,6 +319,7 @@ public class InstructorHomePage extends AppPage {
     }
 
     private int getEvaluationRowId(String courseId, String evalName) {
+        waitForAjaxLoaderGifToDisappear();
         int courseRowID = getCourseRowId(courseId);
         if (courseRowID == -1)
             return -2;
@@ -335,6 +336,7 @@ public class InstructorHomePage extends AppPage {
     }
     
     private int getCourseRowId(String courseId) {
+        waitForAjaxLoaderGifToDisappear();
         int id = 0;
         while (isElementPresent(By.id("course-" + id))) {
             if (getElementText(
