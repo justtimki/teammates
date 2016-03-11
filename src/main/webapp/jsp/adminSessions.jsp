@@ -13,11 +13,23 @@
 <ta:adminPage bodyTitle="Ongoing Sessions" pageTitle="TEAMMATES - Administrator Sessions" jsIncludes="${jsIncludes}">
     <h1>
         <small> 
-            Total: ${data.totalOngoingSessions} &nbsp; &nbsp;
-            Opened: ${data.totalOpenStatusSessions} &nbsp; &nbsp;
-            Closed: ${data.totalClosedStatusSessions} &nbsp; &nbsp;
-            Waiting To Open: ${data.totalWaitToOpenStatusSessions} &nbsp; &nbsp;
-            Institutions: ${data.totalInstitutes} &nbsp; &nbsp;
+        <table class="table table-striped">
+            <tr>
+                <td>Total</td>
+                <td>Opened</td>
+                <td>Closed</td>
+                <td>Waiting To Open</td>
+                <td>Institutions</td>
+            </tr>
+            <tr>
+                <td>${data.totalOngoingSessions}</td>
+                <td>${data.totalOpenStatusSessions}</td>
+                <td>${data.totalClosedStatusSessions}</td>
+                <td>${data.totalWaitToOpenStatusSessions}</td>
+                <td>${data.totalInstitutes}</td>
+            </tr>
+        </table>
+
             <br>
             ${data.rangeStartString}&nbsp;&nbsp;
             <span class="glyphicon glyphicon-resize-horizontal"></span>&nbsp;&nbsp;${data.rangeEndString}
